@@ -10,6 +10,7 @@
  * and displays structured output via Serial Monitor.
  */
 
+
 // TODO 1:
 #define LDR_PIN A0
 
@@ -40,3 +41,20 @@ void loop() {
     Serial.print("Light Percentage: ");
     Serial.print(lightPercent);
     Serial.println("%");
+
+    // TODO 7: Apply threshold logic
+    // (Lower value = Bright, Higher value = Dark in most LDR circuits)
+    if (ldrValue < 400) {
+
+        // TODO 8:
+        Serial.println("Status: BRIGHT");
+    }
+    else {
+        Serial.println("Status: DARK");
+    }
+
+    Serial.println("------------------------");
+
+    // TODO 9:
+    delay(500);
+}
